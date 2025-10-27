@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaiiStore - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="stars-container" id="starsContainer"></div>
+
+    <!-- Auth Container -->
+    <div class="auth-container" id="authContainer">
+        <button class="admin-login-btn" id="adminLoginBtn">Login Admin</button>
+        
+        <div class="auth-card" id="loginCard">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="Masukkan email" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Masukkan password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit" class="btn btn-block">Login</button>
+            </form>
+            <div class="auth-switch">
+                Belum punya akun? <a href="#" id="showRegister">Daftar</a>
+            </div>
+        </div>
+
+        <div class="auth-card" id="registerCard" style="display: none;">
+            <h2>Daftar</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="registerName">Nama Lengkap</label>
+                    <input type="text" id="registerName" placeholder="Masukkan nama lengkap" required>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="Masukkan email" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" placeholder="Masukkan password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Konfirmasi Password</label>
+                    <input type="password" id="registerConfirmPassword" placeholder="Konfirmasi password" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit" class="btn btn-block">Daftar</button>
+            </form>
+            <div class="auth-switch">
+                Sudah punya akun? <a href="#" id="showLogin">Login</a>
+            </div>
+        </div>
+
+        <div class="auth-card" id="adminLoginCard" style="display: none;">
+            <h2>Admin Login</h2>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="adminEmail">Email Admin</label>
+                    <input type="email" id="adminEmail" placeholder="Masukkan email admin" required>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password Admin</label>
+                    <input type="password" id="adminPassword" placeholder="Masukkan password admin" required>
+                    <i class="fas fa-lock"></i>
+                </div>
+                <button type="submit" class="btn btn-block">Login Admin</button>
+            </form>
+            <div class="auth-switch">
+                <a href="#" id="backToUserLogin">Kembali ke Login User</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon">
+            <i class="fas fa-info-circle"></i>
+        </div>
+        <div class="toast-message" id="toastMessage">Pesan notifikasi</div>
+        <button class="toast-close" id="toastClose">&times;</button>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage-compat.js"></script>
+
+    <!-- JavaScript Files -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
